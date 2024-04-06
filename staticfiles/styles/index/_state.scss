@@ -1,0 +1,41 @@
+.visible{
+    visibility: visible;
+}
+
+.invinsible{
+    visibility: hidden;
+}
+
+.tilt-hamburger-down{
+    animation: tilt-hamburger-down 0.5s ease-in-out forwards;
+}
+
+@keyframes tilt-hamburger-down{
+    100%{
+        transform: rotate(50deg) translateY(9px);
+    }
+}
+
+.tilt-hamburger-up{
+    animation: tilt-hamburger-up 0.5s ease-in-out forwards;
+}
+
+@keyframes tilt-hamburger-up{
+    100%{
+        background-color: var(--underline-yellow);
+        transform: rotate(-50deg) translateY(-10px);
+    }  
+}
+
+.top-down{
+    animation: top-down 0.5s ease-in-out;
+}
+
+@keyframes top-down{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

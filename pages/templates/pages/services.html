@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static '/styles/css/services.css' %}">
+    <title>Sunnyside</title>
+</head>
+<body>
+    <main class="main">
+        <section class="header--top">
+            <figure class="header--logo">
+                 <a href="{% url 'pages:index' %}">
+                    <img src="{% static '/assets/images/logo.svg' %}" alt="logo">
+                </a>
+            </figure>
+            <nav class="nav">
+                <figure class="nav--hamburger-menu">
+                    <div class="nav--hamburger-menu-top"></div>
+                    <div class="nav--hamburger-menu-center"></div>
+                    <div class="nav--hamburger-menu-down"></div>
+                </figure>
+             <menu class="nav--content">
+                    <li class="nav--items">
+                        <a href="{% url 'pages:home' %}">Get Started</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:services' %}">Services</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:about' %}">About</a>
+                    </li>
+                </menu>
+            </nav>
+        </section>
+        <section class="body">
+              <section class="info">
+            <article class="info--container">
+                <h3 class="info--title">Reach Us</h3>
+                <figure>
+                    <p class="material-symbols-outlined ">call</p>
+                    <figcaption>
+                        +123567889
+                    </figcaption>
+                </figure>
+                <figure>
+                    <p class="material-symbols-outlined ">mail</p>
+                    <figcaption>
+                        sunnyside@gmail.com
+                    </figcaption>
+                </figure>
+                <figure>
+                    <p class="material-symbols-outlined ">home</p>
+                    <figcaption>
+                        No 1 opposite hillcrest view
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="info--container align-right">
+                <h3 class="info--title">Company</h3>
+                    <p class="info--item">Contact</p>
+                    <p class="info--item">Blogs</p>
+                    <p class="info--item">Subscribe</p>
+            </article>
+        </section>
+        <section class="info">
+            <article class="info--container">
+                <h3 class="info--title">Legal</h3>
+                    <p class="info--item">Privacy Policy</p>
+                    <p class="info--item">Terms & Services</p>
+                    <p class="info--item">Terms of use</p>
+                    <p class="info--item">Refund Policy</p>    
+            </article>
+            <article class="info--container align-right">
+                <h3 class="info--title">Quick links</h3>
+                    <p class="info--item">Forum</p>
+                    <p class="info--item">Downloads</p>
+                    <p class="info--item">Tutorials</p>
+            </article>
+        </section>
+        </section>
+        <section class="essay">
+            At Sunnyside, we believe in the power of language to connect people, transcend bounsaries, and foster understanding across cultures. Founded on the principke of breaking down linguistic barriers, our plarform is dedicated to empowering individuals and bussinesses to communicate effectively in a diverse and interconnected world.
+        </section>
+    </main>
+</body>
+<script src="{% static '/scripts/main.js' %}"></script>
+</html>

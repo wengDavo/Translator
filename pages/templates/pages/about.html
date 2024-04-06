@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/css/about.css' %}">
+    <title>Sunnyside</title>
+</head>
+<body>
+    <main class="main">
+        <section class="header--top">
+            <figure class="header--logo">
+                <a href="{% url 'pages:index' %}">
+                    <img src="{% static '/assets/images/logo.svg' %}" alt="logo">
+                </a>
+            </figure>
+            <nav class="nav">
+                <figure class="nav--hamburger-menu">
+                    <div class="nav--hamburger-menu-top"></div>
+                    <div class="nav--hamburger-menu-center"></div>
+                    <div class="nav--hamburger-menu-down"></div>
+                </figure>
+                <menu class="nav--content">
+                    <li class="nav--items">
+                        <a href="{% url 'pages:home' %}">Get Started</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:services' %}">Services</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:about' %}">About</a>
+                    </li>
+                </menu>
+            </nav>
+        </section>
+        <section class="main--title">
+            <h2>A few words about this site, what we do, and our <span class="underline">mission</span></h2>
+        </section>
+        <section class="main--image">
+            <figure>
+                <img src="{% static '/assets/images/translation-hands.jpg' %}" alt="hands">
+            </figure>
+        </section>
+        <section class="main--article-container">
+            <article class="main--article ">
+                <p>At Sunnyside, we believe in the power of language to connect people, transcend boundaries, and foster understanding across cultures. Founded on the principke of breaking down linguistic barriers, our platform is dedicated to empowering individuals and bussinesses to communicate effectively in a diverse and interconnected world.</p>
+                <h3 class="main--article-title">What's next</h3>
+                <p>Our journey began with a vision to make language learning and translation accessible, intuitive, and impactful for everyoone. With a team of passionate linguists, educators, and technologists, we have developed, a comprehensive suite of language solutions, designed to meet the evolving need of our global community.</p>
+            </article>
+            <article class="main--article-image">
+                <figure>
+                    <img src="{% static '/assets/images/translation-pens.jpg' %}" alt="">
+                    <figcaption>connect and discover with us</figcaption>
+                </figure>
+            </article>
+            <article class="main--article">
+                <p>What sets us apart is our unwavering commitment to excellence in language education and translation services. Whether you are a student embarking on a journey of language discovery or a multinational corporation expanding into new markets, we provide the tools, resources, and support you need to succed, our best qualities are</p>
+                <ul class="m-top-bottom">
+                    <li>Diversity</li>
+                    <li>Cross cultural promotion</li>
+                    <li>Colloboration on a global scale</li>
+                </ul>
+                <p>But our mission goes beyond just providing language tools and services. we are committed to fostering a community of global citizens who embrace diversity, empathy, and mutual respect. Through partnerships with educational institutions, cultural organizations, and non-profit initiatives, we promote cross-cultural understanding and Colloboration on a global scale.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="{% static '/scripts/main.js' %}"></script>
+</html>

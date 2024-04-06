@@ -1,0 +1,77 @@
+.rotate{
+    animation: rotate 1s ease-in;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.move-left{
+    animation: move 0.5s ease-in 2;
+}
+
+@keyframes move{
+    100%{
+        transform: translateX(5px);
+    }
+}
+
+.typing-container{
+    font-family: var(--secondary);
+    color: var(--green);
+}
+
+// .beat{
+//     animation: beat 1s ease-in-out infinite;
+// }
+// @keyframes beat{
+//     0%{
+//         transform: scale(1.2);
+//     }
+// }
+
+.flow{
+    display: inline-block;
+    animation: updown 0.8s ease-in-out  infinite;
+}
+@keyframes updown {
+    100%{
+        transform: translateY(-8px);
+    }
+}
+
+@for $i from 1 through 3{
+    .typing-container span:nth-child(#{$i}){
+        animation-delay: $i * 0.2s;
+    }
+}
+
+// 
+.view-input{
+    & > .search--input{
+        display: block;  
+    }  
+}
+.collapse-icons{
+     & ~ .search--icon{
+        display: none;
+    }
+}
+.view-results{
+    &~ .search--aside{
+        display: block;
+    }
+}
+// 
+.view-settings{
+    &~ .settings--aside{
+        display: block;
+    }
+}
+.view-languages{
+    &~ .languages--aside{
+        display: block;
+    }
+}

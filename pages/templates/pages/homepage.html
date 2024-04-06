@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '/styles/css/homepage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Sunnyside</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header--left">
+        <figure class="country-flag">
+          <div class="country-code">{{translated_lang}}</div>
+        </figure>
+      </section>
+      <search class="search">
+        <form
+          action="{%  url 'pages:home' %}"
+          class="search--form"
+          name="searchform"
+          method="GET"
+        >
+          {% csrf_token %}
+            <button class="material-symbols-outlined search--icon" name="searchform">language_korean_latin</button>
+        </form>
+        <button class="material-symbols-outlined search--icon">
+            <a href="{% url 'pages:index' %}">logout</a>
+        </button>
+        <!--  -->
+        <aside class="search--aside no-scrollbar">
+          <form action="{%  url 'pages:home' %}" method="POST" class="selectform select-form" name="selectform">
+            {% csrf_token %}
+            <select class="language" name="language" id="langauge">
+                <option value="select">Select a language</option>
+              {% for language in lang %}
+              <option value="{{language.code}}" class="language--name">
+                {{ language.title }} {{language.code}}
+              </option>
+              {% endfor %}
+            </select>
+             <button type="submit" name="selectform">&#9989;</button>
+          </form>
+        </aside>
+      </search>
+    </header>
+    <main class="main">
+      <section class="body no-scrollbar">
+        <article class="messages-container">
+          <div class="message-text">
+            {{message}}
+            <p class="message-lang">{{message_lang}}</p>
+          </div>
+        </article>
+        <article class="messages-container">
+          <div class="message-text">
+            {{translated}}
+            <p class="message-lang">{{translated_lang}}</p>
+          </div>
+        </article>
+      </section>
+      <section class="send">
+        <form
+          action="{%  url 'pages:home' %}"
+          class="send--form"
+          name="sendform"
+          method="POST"
+        >
+          {% csrf_token %}
+          <textarea
+            name="send"
+            id="send"
+            cols="10"
+            rows="1"
+            class="send--input no-scrollbar"
+            placeholder="message..."
+          ></textarea>
+          <div class="typing-container beat">
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+          </div>
+          <button type="submit" class="send--button" name="sendform">Send</button>
+        </form>
+      </section>
+    </main>
+    <aside class="aside">
+      <!--  -->
+      <section class="aside--icons">
+        <article>
+          <button class="material-symbols-outlined search--icon">
+            <a href="{% url 'pages:index' %}">logout</a>
+            </button>
+        </article>
+      </section>
+      <!--  -->
+      <section class="side">
+        <h3 class="side--title">languages</h3>
+         <article>
+          <form action="{%  url 'pages:home' %}" class="side--form" method="POST">
+            {% csrf_token %}
+            <button class="material-symbols-outlined search--icon">restart_alt</button>
+          </form>
+        </article>
+        <article class="languages no-scrollbar">
+          <form action="{%  url 'pages:home' %}" method="POST" class="selectform">
+            {% csrf_token %}
+            <select class="language" name="language" id="langauge">
+              {% for language in lang %}
+              <option value="{{language.code}}" class="language--name">
+                {{ language.title }} {{language.code}}
+              </option>
+              {% endfor %}
+            </select>
+            <button type="submit">&#9989;</button>
+          </form>
+        </article>
+      </section>
+    </aside>
+  </body>
+  <script src="{% static '/scripts/homepage.js' %}"></script>
+</html>

@@ -1,0 +1,63 @@
+$mobile: 375px;
+$desktop: 700px;
+
+:root{
+    // colors
+    --underline-red: hsl(7, 99%, 70%);
+    --underline-yellow: hsl(51, 100%, 49%);
+    --green: hsl(168, 28%, 45%);
+    --message:rgb(222, 232, 232);
+    --body:hsl(168, 12%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --border:#DADFEA;
+    // font
+    --regular:1rem;
+    --title:2.5rem;
+    // 
+    --regular: 600;
+    --bold: 700;
+    // 
+    --normal:Arial, Helvetica, sans-serif;
+    --secondary: cursive;
+    // font-family: ;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--normal);
+    font-weight: var(--f-weight-regular);
+    font-size: var(--f-size-regular);
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: inherit;
+    display: block;
+}
+button,input, textarea{
+    border: none;
+    outline: none;
+}
+button{
+    background-color: transparent;
+    cursor: pointer;
+}
+menu, ul{
+    list-style: none;
+}
+
+@mixin responsive($size){
+    @media(min-width:$size) {
+        @content;
+    }
+}

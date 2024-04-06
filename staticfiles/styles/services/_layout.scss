@@ -1,0 +1,34 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  
+    padding: 0 0.4em; 
+}
+
+.header--top{
+    grid-column: 1/-1;
+    margin-bottom: 1rem;
+}
+
+.body{
+    grid-column: 1/-1;
+    @include responsive($desktop){
+        grid-column: 1 / span 6;
+        padding: 0 1rem;
+    }
+}
+
+.essay{
+    grid-column: 1/-1;
+    line-height: 1.4;
+    text-align: left;
+    font-size: var(--title);
+    padding-left: 0.2em;
+    border-left: 6px solid var(--header-title);
+    font-family: cursive;
+     @include responsive($desktop){
+        align-self: end;
+        grid-column: 7 / span 12;
+        margin-left: 1rem;
+        line-height: 1.7;
+    }
+}

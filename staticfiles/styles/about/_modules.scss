@@ -1,0 +1,106 @@
+.underline{
+    text-decoration:underline;
+    text-decoration-color: var(--underline-red);
+}
+.m-top-bottom{
+    margin: 1em 0;
+}
+
+.header--top{
+    height: 90px;
+    padding: 1em 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav{
+    cursor: pointer;
+}
+.nav--content{
+    //mobile
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    row-gap: 1em;
+
+    background-color: var(--neutral-white);
+    color: var(--neutral-gray-blue);
+
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    height: 315px;
+    visibility: hidden;
+
+    // desktop
+    @include responsive($desktop){
+
+        color: var(--neutral-white);
+        visibility: visible;
+        position: static;
+        height: 10%;
+        width: fit-content;
+        flex-flow: row;
+
+        padding: 1rem;
+        column-gap: 3rem;
+        font-size: 1em;
+        background-color: transparent;
+    
+    }
+}
+.nav--items{
+    color:var(--header-bg);
+    @include responsive($desktop){
+        color: var(--neutral-white);
+    }
+    &:hover{
+    // mobile
+    border-radius: 20px;
+    background-color:var(--header-title);
+    color: var(--neutral-dark-blue);
+    padding: 0.6em 1.5em;
+    // desktop
+    @include responsive($desktop){
+        color: var(--neutral-white);
+        padding: 0.5em 1em;  
+    }
+    }
+}
+
+
+.nav--hamburger-menu{
+    @include responsive($desktop){
+        visibility: hidden;
+        position: absolute;
+    }
+
+    position: relative;
+    &-top{
+        position: absolute;
+        top: -150%;
+        background-color: var(--neutral-white);
+         height: 4px;
+        width: 25px;
+        border-radius: 5px; 
+    }
+    &-center{
+        background-color: var(--neutral-white);
+        height: 4px;
+        width: 25px;
+        border-radius: 5px;
+
+    }
+    &-down{
+        position: absolute;
+        bottom: -150%;
+        background-color: var(--neutral-white);
+        height: 4px;
+        width: 25px;
+        border-radius: 5px; 
+    }
+}

@@ -1,0 +1,185 @@
+.no-break{
+    white-space: nowrap;
+}
+
+.bg-transparent{
+    background-color: transparent;
+}
+
+.underline-red{
+    &::after{
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 110px;
+        left: -5%;
+        bottom: 0;
+        z-index: -1;
+        border-radius: 10px;
+        background-color: var(--underline-red);
+    }
+}
+.underline-yellow{
+    @extend .underline-red;
+    &::after{
+         background-color: var(--underline-yellow);
+    }
+}
+
+.card--reverse > :first-child{
+    @include responsive($desktop){
+        order: 2;
+    }
+}
+.card--reverse > :last-child{
+    @include responsive($desktop){
+        order: 1;
+    }
+}
+
+.card{
+    display: grid;
+    color: var(--neutral-dark-blue);
+    @include responsive($desktop){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.card--body{
+    text-align: center;
+    margin-inline:auto;
+    
+    @include responsive($desktop){
+        text-align: left;
+        align-self: center;
+        width: 80%;
+    }
+
+}
+.card--caption{
+    color: var(--header-bg);
+    height: fit-content;
+    width: 90%;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    line-height: 1.4;
+    @include responsive($desktop){
+        width: 60%;
+        text-align: left;
+    }
+}
+.card--title{
+    padding: 2rem 0;
+    letter-spacing: 0.6rem;
+    text-transform: capitalize;
+    font-weight: var(--f-weight-bold);
+
+    @include responsive($desktop){
+        font-size: 2em;
+         width: 80%;
+         letter-spacing: 0.2em;     
+    }
+}
+.card--msg{
+    line-height: 2;
+    padding: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+    color: var(--photography-text);
+    @include responsive($desktop){
+        margin: 0;
+    }
+}
+
+.card--link{
+    font-weight: var(--f-weight-bold);
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+
+    @include responsive($desktop){
+        margin: 0;
+    }
+}
+
+.card--meta{
+    position: relative;
+    height: fit-content;
+    text-align: center;
+}
+.align-center{
+    align-self: center;
+}
+.w-95{
+    @include responsive($desktop){
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.testimonials{
+    text-align: center;
+    @include responsive($desktop){
+        padding: 4em 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2em;
+    }
+}
+.testimonials--title{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--photography-text);
+    grid-column: 1/-1;
+}
+.testimonials--body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.2em;
+    padding: 1em 0;
+    @include responsive($desktop){
+        padding-inline:1em;
+    }
+}
+.testimonials--profile-pic {
+    & img{
+    width: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    }
+}
+.testimonials--qoute{
+    width: 90%;
+    line-height: 1.7;
+    font-size: 1.1em;
+    color:var(--neutral-gray-blue);
+    @include responsive($desktop){
+        font-size: 1em;
+        line-height: 1.3;
+    }
+}
+.testimonials--address{
+    font-style: normal;
+}
+.testimonials--name{
+    font-weight: var(--f-weight-bold);
+    padding: 0.8em;
+}
+.testimonials--job{
+    color: var(--photography-text);
+}
+
+.underline{
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.photograpy-text{
+    color: var(--photography-text);
+}

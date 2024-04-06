@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/css/main.css' %}">
+    <title>Sunnyside</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header--top">
+            <figure class="header--logo">
+                <a href="{% url 'pages:index' %}">
+                    <img src="{% static '/assets/images/logo.svg' %}" alt="logo">
+                </a>
+            </figure>
+            <nav class="nav">
+                <figure class="nav--hamburger-menu">
+                    <div class="nav--hamburger-menu-top"></div>
+                    <div class="nav--hamburger-menu-center"></div>
+                    <div class="nav--hamburger-menu-down"></div>
+                </figure>
+                <menu class="nav--content">
+                    <li class="nav--items">
+                        <a href="{% url 'pages:home' %}">Get Started</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:services' %}">Services</a>
+                    </li>
+                    <li class="nav--items">
+                        <a href="{% url 'pages:about' %}">About</a>
+                    </li>
+                </menu>
+            </nav>
+        </section>
+        <section class="header--middle">
+            <h3 class="header--title"><span class="no-break">We Are</span> Creatives</h3>
+            <figure class="header--arrow-down">
+                <img src="{% static '/assets/images/icon-arrow-down.svg' %}" alt="icon arrow down">
+            </figure>
+        </section>
+    </header>
+    <main class="main">
+        <section class="card">
+            <figure class="card--image">
+                <img src="{% static '/assets/images/translation-pens.jpg' %}" alt="egg">
+            </figure>
+            <article class="card--body">
+                <h3 class="card--title">A journey of Global connection</h3>
+                <p class="card--msg">Discover a world of boundless communication and cultural exchange with SUNNYSIDE. Our platform celebrates the rich tapestry of languages and cultures that make our global community vibrant and</p>
+                <p class="card--link underline-yellow">Diverse</p>
+            </article>
+        </section>
+        <section class="card card--reverse">
+            <figure class="card--image">
+                <img src="{% static '/assets/images/translation-hands.jpg' %}" alt="cup">
+            </figure>
+            <article class="card--body">
+                <h3 class="card--title">a wolrd of boundless communication</h3>
+                <p class="card--msg">Welcome to Sunnyside, where language knows no bounds! Explore seamless communication with our comprehensive translation service, We are here to brige the gap between language and</p>
+                 <p class="card--link underline-red">Cultures</p>
+            </article>
+        </section>
+        <section class="card">
+            <article class="card--meta">
+                <figure class="card--image">
+                    <img src="{% static '/assets/images/translation-mixedup.jpg' %}" alt="cherries">
+                </figure>
+                <div class="card--caption ">
+                    <h3 class="card--title ">Be understood</h3>
+                    <figcaption class="">Dicover the transformative power of clear communicatiom with us! Our services ensure that you aren't just heard but truly understood across all languages</figcaption>
+                </div>
+            </article>
+            <article class="card--meta align-center w-95">
+                <figure class="card--image">
+                    <img src="{% static '/assets/images/translation-mixed.webp' %}" alt="orange">
+                </figure>
+                <div class="card--caption">
+                    <h3 class="card--title ">Speak with clarity</h3>
+                    <figcaption class="">Unluck the potential of confident communication with <span class="underline">SUNNYSIDE</span>. Our services goes beyond mere translation, we empower you to speak better ina ny language.</figcaption>
+                </div>
+            </article>
+        </section>
+        <section class="testimonials">
+            <h3 class="testimonials--title">Client testimonials</h3>
+            <article class="testimonials--body">
+                <figure class="testimonials--profile-pic">
+                    <img src="{% static '/assets/images/image-emily.jpg' %}" alt="profile-pic">
+                </figure>
+                <blockquote class="testimonials--qoute">
+                     We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+                </blockquote>
+                <address class="testimonials--address">
+                    <p class="testimonials--name">Wosetimi Paul</p>
+                    <p class="testimonials--job">Marketing Director</p>
+                </address>
+            </article>
+            <article class="testimonials--body">
+                <figure class="testimonials--profile-pic">
+                    <img src="{% static '/assets/images/image-thomas.jpg' %}" alt="profile-pic">
+                </figure>
+                <blockquote class="testimonials--qoute">
+                    Sunnyside's enthusiasm coupled with their keen interest in accurate translation made it a satisfying and enjoyable experience.
+                </blockquote>
+                <address class="testimonials--address">
+                    <p class="testimonials--name">Chikamso</p>
+                    <p class="testimonials--job">Chief Operating Officer</p>
+                </address>
+            </article>
+            <article class="testimonials--body">
+                <figure class="testimonials--profile-pic">
+                    <img src="{%static '/assets/images/image-jennie.jpg' %}" alt="profile-pic">
+                </figure>
+                <blockquote class="testimonials--qoute">
+                    Incredible end result! Our sales increased over 20% when we worked with Sunnyside for translations. Highly recommended!
+                </blockquote>
+                <address class="testimonials--address">
+                    <p class="testimonials--name">Femi Cyril</p>
+                    <p class="testimonials--job">Auto Business Owner</p>
+                </address>
+            </article>
+        </section>
+        <section class="photo-grid">
+              <figure>
+                <img src="{% static '/assets/images/translation-grid4.jpg' %}" alt="">
+            </figure>
+            <figure>
+                <img src="{% static '/assets/images/translation-grid-1.png' %}" alt="milkbootles">
+            </figure>
+            <figure>
+                <img src="{% static '/assets/images/translation-grid3.webp' %}" alt="">
+            </figure>
+            <figure>
+                <img src="{% static '/assets/images/translation-grid2.webp' %}" alt="orange">
+            </figure>
+        </section>
+    </main>
+    <footer class="footer">
+        <figure class="footer--logo">
+            <img src="{% static '/assets/images/logo.svg' %}" alt="logo">
+        </figure>
+    </footer>
+</body>
+<script src="{% static '/scripts/main.js' %}"></script>
+</html>
